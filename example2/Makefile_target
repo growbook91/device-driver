@@ -1,0 +1,13 @@
+KERNDIR=/home/gmlee/Projects/yocto/yocto/build/tmp/work/imx8mpevk-poky-linux/linux-imx/5.10.72+gitAUTOINC+c59614bdd6-r0/build
+
+obj-m+=mymodule.o
+objs+=mymodule.o
+PWD=$(shell pwd)
+
+default:
+	make -C $(KERNDIR) M=$(PWD) modules
+
+clean:
+	make -C $(KERNDIR) M=$(PWD) clean
+	rm -rf *.ko
+	rm -rf *.o

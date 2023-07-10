@@ -1,0 +1,1 @@
+cmd_/home/gmlee/Projects/code/first_device_driver/driver.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -z noexecstack   --build-id  -T ./scripts/module-common.lds -o /home/gmlee/Projects/code/first_device_driver/driver.ko /home/gmlee/Projects/code/first_device_driver/driver.o /home/gmlee/Projects/code/first_device_driver/driver.mod.o;  true
